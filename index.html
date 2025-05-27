@@ -12,7 +12,7 @@
     }
     img.top-image {
       width: 100%;
-      max-width: 400px; /* smaller for better quality */
+      max-width: 400px;
       border-radius: 12px;
       margin-bottom: 20px;
     }
@@ -27,8 +27,12 @@
       border-radius: 30px;
       overflow: hidden;
       width: 80%;
-      margin: 0 auto;
       max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding-right: 60px; /* room for goal on right */
+      position: relative;
     }
     .progress-bar {
       height: 40px;
@@ -38,6 +42,20 @@
       font-weight: bold;
       line-height: 40px;
       transition: width 0.8s ease;
+      border-radius: 30px 0 0 30px;
+      padding-left: 10px;
+      box-sizing: border-box;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .goal-label {
+      position: absolute;
+      right: 10px;
+      font-weight: bold;
+      color: #444;
+      user-select: none;
+      white-space: nowrap;
     }
   </style>
 </head>
@@ -47,11 +65,13 @@
     class="top-image"
     src="angello-pro-tL5RIAYxObs-unsplash.jpg"
     alt="Boat with girls" />
+  
   <div class="progress-container">
-    <div class="progress-bar" id="progressBar">$0 / $7,000</div>
+    <div class="progress-bar" id="progressBar">$0</div>
+    <div class="goal-label">$7,000</div>
   </div>
 
-  <!-- Your uploaded image at bottom -->
+  <!-- Bottom big image -->
   <img
     class="bottom-image"
     src="yachtgirls.jpeg"
@@ -73,7 +93,7 @@
         const percent = Math.min(100, (total / target) * 100);
         const bar = document.getElementById('progressBar');
         bar.style.width = percent + '%';
-        bar.textContent = `$${total.toLocaleString()} / $7,000`;
+        bar.textContent = `$${total.toLocaleString()}`;
         if (total >= target) {
           bar.style.background = 'linear-gradient(90deg, #66bb6a, #43a047)';
           document.body.style.background = '#fff3e0';
