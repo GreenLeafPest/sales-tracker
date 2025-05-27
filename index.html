@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sales Ahoy!</title>
+  <title>D2D Boat Day Tracker</title>
   <style>
     body {
       font-family: sans-serif;
       text-align: center;
       background: #e0f7fa;
       padding: 20px;
+      margin: 0;
     }
-    img {
+    img.top-image {
       width: 100%;
-      max-width: 800px;
+      max-width: 600px;
       border-radius: 12px;
       margin-bottom: 20px;
+    }
+    img.bottom-image {
+      width: 100%;
+      max-width: none;
+      margin-top: 40px;
+      border-radius: 0;
     }
     .progress-container {
       background: #ddd;
@@ -21,6 +28,7 @@
       overflow: hidden;
       width: 80%;
       margin: 0 auto;
+      max-width: 800px;
     }
     .progress-bar {
       height: 40px;
@@ -34,11 +42,20 @@
   </style>
 </head>
 <body>
-  <h1>🚤 Sales Ahoy – Boat Bonus Tracker!</h1>
-  <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-3ErAytTovOxTIyCpniZXHrxM/user-zHDwNGBqGZTDZEsAx97Shc1A/img-7ZLVF1XLNsqr2YJ5jIJQYwEr.png?st=2024-05-27T19%3A40%3A00Z&se=2024-05-28T19%3A40%3A00Z&sp=r&sv=2021-08-06&sr=b&sig=t%2FDM3gbdiVPhqmdK8P2T%2BSLgtszIjzRkgPYhMpFX9mY%3D" alt="Party Yacht" />
+  <h1>🚤 D2D Boat Day Tracker</h1>
+  <img
+    class="top-image"
+    src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-3ErAytTovOxTIyCpniZXHrxM/user-zHDwNGBqGZTDZEsAx97Shc1A/img-7ZLVF1XLNsqr2YJ5jIJQYwEr.png?st=2024-05-27T19%3A40%3A00Z&se=2024-05-28T19%3A40%3A00Z&sp=r&sv=2021-08-06&sr=b&sig=t%2FDM3gbdiVPhqmdK8P2T%2BSLgtszIjzRkgPYhMpFX9mY%3D"
+    alt="Party Yacht" />
   <div class="progress-container">
     <div class="progress-bar" id="progressBar">$0 / $7,000</div>
   </div>
+
+  <!-- Your uploaded image at bottom -->
+  <img
+    class="bottom-image"
+    src="yachtgirls.jpeg"
+    alt="Girls on yacht party" />
 
   <script>
     const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqz09HGV04SFZ-vYdRgRO5sy2zEfpeqeuFN5UWHzw4BuDVN0CaFhhoT6STrv1qIdqwHxpucPgARmba/pub?output=csv";
