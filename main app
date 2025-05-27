@@ -40,7 +40,8 @@
   </div>
 
   <script>
-    const sheetUrl = "file:///Users/chrisferraro/Downloads/Sales%20Tracker%20-%20Sheet1.csv";
+    const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqz09HGV04SFZ-vYdRgRO5sy2zEfpeqeuFN5UWHzw4BuDVN0CaFhhoT6STrv1qIdqwHxpucPgARmba/pub?output=csv
+";
     const target = 7000;
 
     fetch(sheetUrl)
