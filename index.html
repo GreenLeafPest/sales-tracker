@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>D2D Boat Day Tracker</title>
+  <title>D2D Steak Dinner Tracker</title>
   <style>
     body {
       font-family: sans-serif;
@@ -54,20 +54,21 @@
   </style>
 </head>
 <body>
-  <h1>🚤 D2D Boat Day Tracker</h1>
+  <h1>🥩 D2D Steak Dinner Tracker</h1>
+  <p>🎯 Goal: $12,000 — Ends next Wednesday!</p>
   <img
     class="top-image"
-    src="angello-pro-tL5RIAYxObs-unsplash.jpg"
-    alt="Boat with girls" />
+    src="halls.jpg"
+    alt="Steak Dinner at Hall's" />
   
   <div class="progress-container">
     <div class="progress-bar" id="progressBar">$0</div>
-    <div class="goal-label">$7,000</div>
+    <div class="goal-label">$12,000</div>
   </div>
 
   <script>
     const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqz09HGV04SFZ-vYdRgRO5sy2zEfpeqeuFN5UWHzw4BuDVN0CaFhhoT6STrv1qIdqwHxpucPgARmba/pub?output=csv";
-    const target = 7000;
+    const target = 12000;
 
     fetch(sheetUrl)
       .then(response => response.text())
