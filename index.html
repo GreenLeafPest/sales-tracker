@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>D2D Steak Dinner Tracker</title>
+  <title>August Sales Challenge</title>
   <style>
     body {
       font-family: sans-serif;
@@ -12,9 +12,10 @@
     }
     img.top-image {
       width: 100%;
-      max-width: 400px;
+      max-width: 500px;
       border-radius: 12px;
       margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     .progress-container {
       background: #ddd;
@@ -54,21 +55,22 @@
   </style>
 </head>
 <body>
-  <h1>🥩 D2D Steak Dinner Tracker</h1>
-  <p>🎯 Goal: $12,000 — Ends next Wednesday!</p>
+  <h1>🌴 August Sales Challenge</h1>
+  <p>🎯 Goal: $25,000 — Ends August 31st!</p>
+
   <img
     class="top-image"
-    src="halls.jpg"
-    alt="Steak Dinner at Hall's" />
+    src="Bahamas.webp"
+    alt="Bahamas Sales Incentive Trip" />
   
   <div class="progress-container">
     <div class="progress-bar" id="progressBar">$0</div>
-    <div class="goal-label">$12,000</div>
+    <div class="goal-label">$25,000</div>
   </div>
 
   <script>
     const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqz09HGV04SFZ-vYdRgRO5sy2zEfpeqeuFN5UWHzw4BuDVN0CaFhhoT6STrv1qIdqwHxpucPgARmba/pub?output=csv";
-    const target = 12000;
+    const target = 25000;
 
     fetch(sheetUrl)
       .then(response => response.text())
